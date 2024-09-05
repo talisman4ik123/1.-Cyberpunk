@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Cyberpunk</title>
 </head>
 <body>
@@ -17,32 +21,32 @@
                     </div>
                     <ul class="header-top__socials socials">
                         <li class="socials__item">
-                            <a href="https://www.youtube.com/" class="socials__link">
+                            <a href="https://www.youtube.com/" class="socials__link" target="_blank">
                                 <img src="icons/YouTube.svg" alt="youtube icon" class="socials__img">
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="https://vk.com/" class="socials__link">
+                            <a href="https://vk.com/" class="socials__link" target="_blank">
                                 <img src="icons/vk.svg" alt="vkontakte icon" class="socials__img">
                             </a>    
                         </li>
                         <li class="socials__item">
-                            <a href="https://www.facebook.com/" class="socials__link">
+                            <a href="https://www.facebook.com/" class="socials__link" target="_blank">
                                 <img src="icons/fb.svg" alt="facebook icon" class="socials__img">
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="https://x.com/" class="socials__link">
+                            <a href="https://x.com/" class="socials__link" target="_blank">
                                 <img src="icons/tw.svg" alt="twitter icon" class="socials__img">
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="https://www.twitch.tv/" class="socials__link">
+                            <a href="https://www.twitch.tv/" class="socials__link" target="_blank">
                                 <img src="icons/twitch.svg" alt="twitch icon" class="socials__img">
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="https://www.instagram.com/" class="socials__link">
+                            <a href="https://www.instagram.com/" class="socials__link" target="_blank">
                                 <img src="icons/inst.svg" alt="instagram icon" class="socials__img">
                             </a>
                         </li>
@@ -76,28 +80,33 @@
         <section class="sale">
             <div class="container">
                 <div class="sale__inner">
-                    <img src="icons/sale.svg" alt="sale icon" class="sale__icon">
-                    <div class="sale-main">
+                    <div class="sale-top">
+                        <img src="icons/sale.svg" alt="sale icon" class="sale__icon">
                         <h2 class="sale__title title">Играй и выигрывай!</h2>
-                        <p class="sale__text text">
-                            Играй в <span>Cyberpunk 2077</span> и получи возможность выиграть консоль <span>Xbox Series X</span> или <span>Sony PlayStation 5</span>! Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
-                        </p>
+                    </div>
+                    <p class="sale__text text">
+                        Играй в <span>Cyberpunk 2077</span> и получи возможность выиграть консоль <span>Xbox Series X</span> или <span>Sony PlayStation 5</span>! Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
+                    </p>
+                    <div class="sale-main">
                         <form action="" class="sale-form">
                             <input type="text" placeholder="Как тебя зовут?" class="sale-form__input">
                             <input type="email" placeholder="Твой е-mail" class="sale-form__input">
                             <div class="sale-form__preview">
                                 <a href="" class="sale-form__link">Прикрепить скриншот</a>
+                                <span class="sale-form__span">.png / .jpg / .pdf</span>
                             </div>
                             <button class="sale-form__brn btn">Отправить</button>
-                            <input type="checkbox" class="sale-form__checkbox" id="saleCheckbox">
-                            <label for="saleCheckbox" class="sale-form__label">Согласен на обработку персональных данных</label>
+                            <div class="sale-form__box">
+                                <input type="checkbox" class="sale-form__checkbox" id="saleCheckbox">
+                                <label for="saleCheckbox" class="sale-form__label">Согласен на обработку персональных данных</label>
+                            </div>
                         </form>
-                    </div>
-                    <div class="sale-imgs">
-                        <ul class="sale-imgs__list">
-                            <li class="sale-imgs__item"><img src="images/sale1.png" alt="content image" class="sale-imgs__imgs"></li>
-                            <li class="sale-imgs__item"><img src="images/sale2.png" alt="content image" class="sale-imgs__imgs"></li>
-                        </ul>
+                        <div class="sale-imgs">
+                            <ul class="sale-imgs__list">
+                                <li class="sale-imgs__item"><img src="images/sale1.png" alt="content image" class="sale-imgs__imgs"></li>
+                                <li class="sale-imgs__item"><img src="images/sale2.png" alt="content image" class="sale-imgs__imgs"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,12 +114,14 @@
         <section class="hp">
             <div class="container">
                 <div class="hp__inner">
-                    <ul class="hp-imgs">
-                        <li class="hp-imgs__item"><img src="images/hp-monitor.png" alt="content image" class="hp-imgs__img"></li>
-                        <li class="hp-imgs__item"><img src="icons/hp.svg" alt="content image" class="hp-imgs__img"></li>
-                        <li class="hp-imgs__item"><img src="icons/hp2.svg" alt="content image" class="hp-imgs__img"></li>
-                        <li class="hp-imgs__item"><img src="icons/logo.svg" alt="content image" class="hp-imgs__img"></li>
-                    </ul>
+                    <div class="hp-img__box">
+                        <img src="images/hp-monitor.png" alt="content image" class="hp__img">
+                        <ul class="hp-imgs">
+                            <li class="hp-imgs__item"><img src="icons/hp.svg" alt="content image" class="hp-imgs__img"></li>
+                            <li class="hp-imgs__item"><img src="icons/hp2.svg" alt="content image" class="hp-imgs__img"></li>
+                            <li class="hp-imgs__item"><img src="icons/logo.svg" alt="content image" class="hp-imgs__img"></li>
+                        </ul>
+                    </div>
                     <div class="hp-main">
                         <h2 class="hp__title title">Полное погружение вместе с HP</h2>
                         <p class="hp__text text">Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на любые события с временем отклика 1 мс и частотой в 144 Гц!
