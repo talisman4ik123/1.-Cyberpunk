@@ -25,6 +25,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 .btn {
     max-width: 280px;
     font-family: var(--font-family);
@@ -34,6 +38,11 @@ a {
     color: #f8f200;
     padding: 19px 50px;
     cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    background-color: #2d2c2c;
 }
 
 .title {
@@ -50,7 +59,6 @@ a {
 }
 
 .header {
-    position: relative;
     background: url(/images/header-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,6 +74,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 537px;
 }
 
 .header-top__socials {
@@ -76,14 +85,21 @@ a {
     margin-right: 40px;
 }
 
+.header-top__socials .socials__item {
+    transition: transform .3s;
+}
+
+.header-top__socials .socials__item:hover {
+    transform: scale(1.2);
+}
+
 .header-main__box {
-    position: absolute;
-    bottom: 0;
-    right: 318px;
     background-color: #f8f200;
     padding: 60px;
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
+    max-width: 624px;
+    margin-left: auto;
 }
 
 .header__title {
@@ -187,8 +203,13 @@ a {
     font-size: 18px;
     color: #fff;
     margin-bottom: 35px;
-    width: 460px;
+    max-width: 460px;
+    width: 100%;
     outline: none;
+}
+
+.sale-form__input:focus {
+    border-bottom: 1px solid #52bedc;
 }
 
 .sale-form__preview {
@@ -223,6 +244,10 @@ a {
     background-color: #f8f200;
     color: #000;
     margin-bottom: 15px;
+}
+
+.sale-form__brn:hover {
+    background-color: rgb(192, 166, 20);
 }
 
 .sale-form__box {
@@ -284,6 +309,7 @@ a {
 .hp-main {
     display: flex;
     flex-direction: column;
+    padding-left: 30px;
 }
 
 .hp__title {
@@ -443,23 +469,59 @@ a {
 
 @media (max-width: 1024px) {
     .header-main__box {
-        right: 36px;
         padding: 50px;
         border-top-left-radius: 60px;
         border-bottom-right-radius: 60px;
+    }
+    .header-main__box {
+        max-width: 583px;
+    }
+
+    .hp-imgs {
+        flex-direction: column;
+    }
+
+    .cyberpunk__img {
+        width: 60%;
+    }
+
+    .cyberpunk-main {
+        margin-left: 64%;
+    }
+
+    .cyberpunk__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .cyberpunk__list {
+        margin-bottom: 30px;
+    }
+
+    .cyberpunk__title  {
+        font-size: 34px;
+    }
+    
+    .subfooter__img {
+        padding-right: 30px;
+    }
+
+    .subfooter__link {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 760px) {
     .header-top {
         flex-direction: column;
+        margin-bottom: 430px;
     }
 
     .header-main__box {
-        right: 0;
         padding: 20px;
         border-top-left-radius: 40px;
         border-bottom-right-radius: 40px;
+        max-width: 407px;
     }
 
     .header__title {
@@ -479,11 +541,143 @@ a {
     .header__inner {
         padding-top: 10px;
     }
+
+    .nightCity__inner {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .sale-main {
+        flex-direction: column;
+    }
+
+    .sale-imgs {
+        order: 1;
+    }
+
+    .sale-form {
+        order: 2;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .sale-form__preview {
+        width: 390px;
+    }
+
+    .hp__inner {
+        flex-direction: column;
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .hp-imgs {
+        flex-direction: row;
+        margin-bottom: 30px;
+    }
+
+    .hp-main {
+        padding-left: 0;
+    }
+
+    .cyberpunk__img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .cyberpunk__inner {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .cyberpunk-main {
+        margin-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cyberpunk .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .subfooter__img {
+        width: 100px;
+    }
+
+    .subfooter__link {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .header__title {
         font-size: 28px;
         max-width: 280px;
+    }
+    .header-main__box {
+        max-width: 312px;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .nightCity__text {
+        margin-bottom: 20px;
+    }
+
+    .sale__inner {
+        padding-bottom: 40px;
+    }
+
+    .sale-form__preview {
+        width: 310px;
+        margin-bottom: 25px;
+    }
+
+    .sale-form__input {
+        margin-bottom: 25px;
+    }
+
+    .sale-top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .sale__icon {
+        margin-bottom: 20px;
+    }
+
+    .cyberpunk__img {
+        height: 260px;
+    }
+
+    .subfooter__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subfooter__img {
+        width: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subfooter__link:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .subfooter__link {
+        font-size: 16px;
     }
 }
